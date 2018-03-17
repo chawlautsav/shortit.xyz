@@ -1,0 +1,140 @@
+body
+{
+  margin:0;
+  font-family: 'Mina', sans-serif;
+}
+navbar
+{
+  padding-left: 100px;
+  padding-top: 30px;
+  display: block;
+  font-family: 'Itim', cursive;
+}
+  nitem
+  {
+    padding-left: 10px;
+    display: block;
+    font-size: 50px;
+    color: white;
+  }
+main
+{
+  margin-top: 200px;
+  text-align: center;
+}
+#url
+{
+  width: 45%;
+  background-color: white;
+  border-radius: 8px 0 0 8px ;
+  opacity: .7;
+}
+#btn
+{
+  margin-left: -6px;
+  width: 11%;
+  background-color: #28a800;
+  border-radius: 0 8px 8px 0;
+  color: white;
+}
+#btn:hover
+{
+  opacity: 1;
+  background-color: #28b900;
+  cursor: pointer;
+}
+.formitem
+{
+  font-size: 120%;
+  padding: 1.3%;
+}
+.noborder
+{
+  border: none;
+}
+.custom
+{
+  font-size: 15px;
+  opacity: .8;
+}
+#keyy
+{
+  border-radius: 8px 0 0 8px ;
+  padding: 12px 5px 12px 12px;
+  width: 13%;
+  margin-right: -.4%;
+  background-color: white;
+}
+
+#key
+{
+  padding: 12px;
+  width: 42%;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+}
+html
+{
+  background:url(lappy.jpg) no-repeat center center fixed;
+  background-size:cover;
+}
+@media screen and (max-width: 1263px)
+{
+  html
+  {
+    background:url(lappy.jpg) center;
+  }
+  #btn
+  {
+    width: 200px;
+  }
+  main
+  {
+    margin-top: 300px;
+  }
+  #url
+  {
+    width: 650px;
+  }
+  #key
+  {
+    width: 480px;
+    margin-left: -1px;
+  }
+  #keyy
+  {
+    width: 350px;
+  }
+  .noborder
+  {
+    font-size: 30px;
+  }
+}
+#p
+{
+  margin-left: 21%;
+  border-radius: 5px;
+  background-color: #28a745;
+  display: block;
+  width: 120px;
+  font-size: 17px;
+}
+#created
+{
+  display: none;
+  width: 58%;
+  background-color: #f8f9fa;
+  height: 130px;
+  opacity: .7;
+  padding: 2px;
+  font-weight: bold;
+}
+#createdurl
+{
+  border: none;
+  background-color: #343a40;
+  color: white;
+  width: 80%;
+  padding: .7%;
+  opacity: 1;
+}

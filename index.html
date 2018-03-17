@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+  <title>Lilly Me - Shorten ur URL</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <navbar>
+    <nitem>URL Shortener</nitem>
+  </navbar>
+  <form id="f1">
+  <main>
+    <input type = "text" class="formitem noborder" name="url" id="url" placeholder="Enter URL">
+    <button type="submit" class="formitem noborder" id="btn" >GENERATE</button><br><br>
+    <input type="text" disabled="disabled" class="noborder custom" id="keyy" placeholder="https://lillyme.herokuapp/">
+    <input type="text" class="noborder custom" id="key" placeholder=" < custom url >">
+    <br>
+  </main>
+    <p id="p"></p>
+    <center>
+    <div id="created">
+      <h2> SUCCESS </h2>
+      <span>Your URL is : &nbsp;&nbsp;</span>
+      <input type="text" id="createdurl" disabled="disabled">
+    </div>
+    </center>
+  </form>
+</body> 
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="./init.js"></script>
