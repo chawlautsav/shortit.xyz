@@ -1,52 +1,27 @@
-body
+input:focus 
 {
-  margin:0;
-  font-family: 'Mina', sans-serif;
+    outline:none;
 }
 navbar
 {
   padding-left: 100px;
   padding-top: 30px;
   display: block;
+  font-size: 45px;
+  color: white;
   font-family: 'Itim', cursive;
 }
-  nitem
-  {
-    padding-left: 10px;
-    display: block;
-    font-size: 50px;
-    color: white;
-  }
-main
+#container
 {
-  margin-top: 200px;
-  text-align: center;
+  margin-top: 15%;
 }
-#url
-{
-  width: 45%;
-  background-color: white;
-  border-radius: 8px 0 0 8px ;
-  opacity: .7;
-}
-#btn
-{
-  margin-left: -6px;
-  width: 11%;
-  background-color: #28a800;
-  border-radius: 0 8px 8px 0;
-  color: white;
-}
-#btn:hover
-{
-  opacity: 1;
-  background-color: #28b900;
-  cursor: pointer;
-}
-.formitem
+
+
+/*                 COMMON                  */
+.font
 {
   font-size: 120%;
-  padding: 1.3%;
+  padding:18px;
 }
 .noborder
 {
@@ -55,86 +30,150 @@ main
 .custom
 {
   font-size: 15px;
-  opacity: .8;
-}
-#keyy
-{
-  border-radius: 8px 0 0 8px ;
-  padding: 12px 5px 12px 12px;
-  width: 13%;
-  margin-right: -.4%;
   background-color: white;
+  opacity: .8;
+  padding: 12px 5px 12px 12px;
 }
 
+
+
+/*                INPUT ONE               */
+#url
+{
+  width: 600px;
+  background-color: white;
+  border-radius: 8px 0 0 8px ;
+  opacity: .7;
+}
+#generate
+{
+  margin-left: -5px;
+  width: 160;
+  background-color: #28a800;
+  border-radius: 0 8px 8px 0;
+  color: white;
+}
+
+
+
+/*                INPUT TWO               */
+#domain
+{
+  width: 110px;
+  border-radius: 8px 0 0 8px ;
+}
 #key
 {
-  padding: 12px;
-  width: 42%;
-  background-color: white;
+  width: 630px;
+  margin-left: -5px;
   border-radius: 0 8px 8px 0;
 }
-html
+  
+
+/*                URL CREATED               */
+h2
 {
-  background:url(lappy.jpg) no-repeat center center fixed;
-  background-size:cover;
-}
-@media screen and (max-width: 1263px)
-{
-  html
-  {
-    background:url(lappy.jpg) center;
-  }
-  #btn
-  {
-    width: 200px;
-  }
-  main
-  {
-    margin-top: 300px;
-  }
-  #url
-  {
-    width: 650px;
-  }
-  #key
-  {
-    width: 480px;
-    margin-left: -1px;
-  }
-  #keyy
-  {
-    width: 350px;
-  }
-  .noborder
-  {
-    font-size: 30px;
-  }
-}
-#p
-{
-  margin-left: 21%;
-  border-radius: 5px;
-  background-color: #28a745;
-  display: block;
-  width: 120px;
-  font-size: 17px;
+  font-size: 28px;
 }
 #created
 {
   display: none;
-  width: 58%;
+  width: 770px;
   background-color: #f8f9fa;
-  height: 130px;
   opacity: .7;
   padding: 2px;
   font-weight: bold;
 }
 #createdurl
 {
+  font-size: 16px;
   border: none;
   background-color: #343a40;
   color: white;
-  width: 80%;
+  width: 75%;
   padding: .7%;
   opacity: 1;
 }
+
+
+
+
+/*                MOBILE VIEW               */
+@media screen and (max-width: 1000px)
+{
+
+  navbar
+  {
+    margin-top: 6%;
+    font-size: 100px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  form
+  {
+    font-size: 30px;
+  }
+  #url
+  {
+    width: 660px;
+  }
+  #generate
+  {
+    margin-left: -10px;
+  }
+
+  .custom
+  {
+    font-size: 28px;
+  }
+  #domain
+  {
+    width:230px; 
+  }
+  #key
+  {
+    width:665px;
+    margin-left: -10px;
+  }
+
+  #created
+  {
+
+    font-size: 32px;
+    margin-top: 100px;
+    width: 920px;
+    font-size: 20px;
+  }
+  h2
+  {
+    font-size: 36px;
+  }
+  #createdurl
+  {
+    font-size: 34px;
+  }
+  #container
+  {
+    margin-top: 350px;
+  }
+  html
+  {
+    background:url(background.jpg) center center cover no-repeat fixed;
+  }
+}
+
+
+
+/*                 BASIC WEB LAYOUT :           */
+html
+{
+  background:url(background.jpg) no-repeat center center fixed;
+  background-size:cover;
+}
+body
+{
+  margin:0;
+  font-family: 'Mina', sans-serif;
+}
+

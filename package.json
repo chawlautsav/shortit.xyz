@@ -1,9 +1,24 @@
 {
-  "name": "",
-  "version": "",
+  "name": "shortit.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chawlautsav/shortit.xyz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chawlautsav/shortit.xyz/issues"
+  },
+  "homepage": "https://github.com/chawlautsav/shortit.xyz#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongoose": "^5.0.10"
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14"
   }
 }
