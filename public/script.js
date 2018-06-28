@@ -5,9 +5,7 @@ $('document').ready(function()
 	{
 		var key = $('#key').val();	
 		if( key == '' )
-		{
 			setback();
-		}
 		else
 			keyNotAvailable(key);
 	});
@@ -17,8 +15,7 @@ $('document').ready(function()
 	{
 		e.preventDefault();
 		var key = validKey();	
-		var url = $('#url').val();
-		validUrl();
+		var url = validUrl();									//add this============
 		if( flag == 0 )
 			$.ajax({
 				type:"POST",
@@ -31,9 +28,11 @@ $('document').ready(function()
 					a += key;
 					document.getElementById('createdurl').value= a;
 					flag = 1;
+					console.log("ok");
+					console.log(url + "  "+ key);
 				},
 				error: function(data)
-				{-
+				{
 					alert('Sorry, we are currently unable to process your request.');				
 				}
 			})
@@ -47,13 +46,31 @@ function validUrl()
 	var url = $('#url').val();
 	if( url == "" )
 		flag = 1;
+	return url;
 }
 function validKey()
 {
 	var k = $('#key').val();
 	if( k == "" )
 	{
-		k 	= "xyz";		//generate random key
+		var keyLength = 5;
+		var text;
+		do
+		{
+			text = "";
+			var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			for (var i = 0; i < keyLength; i++)
+				text += possible.charAt(Math.floor(Math.random() * possible.length));
+			keyNotAvailable(text);
+			keyLength++;
+			if( keyLength == 7 )
+				break;
+		} 
+		while( flag == 1 );
+
+
+
+		k 	= text;		//generate random key
 		flag = 0;
 	}
 	else
@@ -68,7 +85,7 @@ function validKey()
 	}
 	return k;
 }
-function setback()
+function setback()										// clearing available not available marker
 {
 	$("#domain").css("border", "none");
 	$("#key").css("border", "none");
@@ -85,27 +102,26 @@ function keyNotAvailable(k)
 			if(data=="true")
 			{
 				$("#domain").css("border", "2px solid #dc3545");
-				$("#domain").css("border-right", "none");
 				$("#key").css("border", "2px solid #dc3545");
-				$("#key").css("border-left", "none");
 				flag = 1;
 				return true;
 			}
 			else if(data=="false")
 			{
 				$("#domain").css("border", "2px solid #28a800");
-				$("#domain").css("border-right", "none");
 				$("#key").css("border", "2px solid #28a800");
-				$("#key").css("border-left", "none");
 				flag = 0;
 			}
 			else
-				console.log('dikkat');
+				console.log('Custom URL Check Request Failed! (1)');
+			
+			$("#domain").css("border-right", "none");
+			$("#key").css("border-left", "none");
 		},
 		error: function(data)
 		{
-			console.log('Custom URL Check Request Failed! ');				
+			console.log('Custom URL Check Request Failed! (2)');				
 		}
 	});
 }
-						// Updated 07-06-2018
+						// Updated 28-06-2018

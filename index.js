@@ -95,7 +95,7 @@ app.get('/:key',function(req,res){
 ///////////////////////////////////// ROUTING END ///////////////////////////////////
 
 
-app.listen(process.env.PORT || 80,function()
+app.listen(process.env.PORT || 3000,function()
 {
-	console.log('server is up and running on port 80');
+	console.log('server is up and running on port 3000');
 });
