@@ -15,7 +15,7 @@ $('document').ready(function()
 	{
 		e.preventDefault();
 		var key = validKey();	
-		var url = validUrl();									//add this============
+		var url = validUrl();									
 		if( flag == 0 )
 			$.ajax({
 				type:"POST",
@@ -28,8 +28,7 @@ $('document').ready(function()
 					a += key;
 					document.getElementById('createdurl').value= a;
 					flag = 1;
-					console.log("ok");
-					console.log(url + "  "+ key);
+					setback();
 				},
 				error: function(data)
 				{
@@ -44,6 +43,12 @@ $('document').ready(function()
 function validUrl()
 {
 	var url = $('#url').val();
+	var temp = "https://";
+	if( url.indexOf(temp) != 0 )
+	{
+		temp = temp + url;
+		url = temp;
+	}
 	if( url == "" )
 		flag = 1;
 	return url;
@@ -124,4 +129,14 @@ function keyNotAvailable(k)
 		}
 	});
 }
+function copy()
+{
+	alert('here');
+	var copyText = document.getElementById("createdurl");
+	copyText.select();
+	document.execCommand("copy");
+	alert(copyText.value);
+}
+
+
 						// Updated 28-06-2018
