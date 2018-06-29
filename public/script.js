@@ -129,14 +129,4 @@ function keyNotAvailable(k)
 		}
 	});
 }
-function copy()
-{
-	alert('here');
-	var copyText = document.getElementById("createdurl");
-	copyText.select();
-	document.execCommand("copy");
-	alert(copyText.value);
-}
-
-
-						// Updated 28-06-2018
+						// Updated 29-06-2018
