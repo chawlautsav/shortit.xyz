@@ -84,6 +84,22 @@ h2
   padding: 2px;
   font-weight: bold;
 }
+#copybutton
+{
+  padding: .4% 2% 0% 2%;
+  background-color: #343a40;
+  margin-left: -1%;
+}
+#copybutton:hover
+{
+  background-color: black;
+  cursor: pointer;
+}
+i
+{
+  color: white;
+  font-size: 16px;
+}
 #createdurl
 {
   font-size: 16px;
@@ -100,8 +116,7 @@ h2
 
 /*                MOBILE VIEW               */
 @media screen and (max-width: 1000px)
-{
-
+{ 
   navbar
   {
     margin-top: 6%;

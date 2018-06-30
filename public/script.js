@@ -11,6 +11,11 @@ $('document').ready(function()
 	});
 
 
+	function setback()										// clearing available not available marker
+	{
+		$("#domain").css("border", "none");
+		$("#key").css("border", "none");
+	}
 	$("#form").submit(function(e)
 	{
 		e.preventDefault();
@@ -24,7 +29,7 @@ $('document').ready(function()
 				success: function(data)
 				{
 					document.getElementById("created").style.display = "block";
-					a = "shortit.xyz/";
+					a = "www.shortit.xyz/";
 					a += key;
 					document.getElementById('createdurl').value= a;
 					flag = 1;
@@ -90,11 +95,6 @@ function validKey()
 	}
 	return k;
 }
-function setback()										// clearing available not available marker
-{
-	$("#domain").css("border", "none");
-	$("#key").css("border", "none");
-}
 function keyNotAvailable(k)
 {
 	$.ajax(
@@ -108,6 +108,9 @@ function keyNotAvailable(k)
 			{
 				$("#domain").css("border", "2px solid #dc3545");
 				$("#key").css("border", "2px solid #dc3545");
+				
+				$("#domain").css("border-right", "none");
+				$("#key").css("border-left", "none");
 				flag = 1;
 				return true;
 			}
@@ -115,6 +118,8 @@ function keyNotAvailable(k)
 			{
 				$("#domain").css("border", "2px solid #28a800");
 				$("#key").css("border", "2px solid #28a800");
+				$("#domain").css("border-right", "none");
+				$("#key").css("border-left", "none");
 				flag = 0;
 			}
 			else
@@ -129,4 +134,4 @@ function keyNotAvailable(k)
 		}
 	});
 }
-						// Updated 29-06-2018
+						// Updated 28-06-2018
