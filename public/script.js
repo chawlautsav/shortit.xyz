@@ -48,7 +48,7 @@ $('document').ready(function()
 function validUrl()
 {
 	var url = $('#url').val();
-	var temp = "https://";
+	var temp = "http://";
 	if( url.indexOf(temp) != 0 )
 	{
 		temp = temp + url;
