@@ -87,7 +87,7 @@ app.get('/:key',function(req,res){
 	    	res.redirect(url.url);
 	   	else
 		{	
-			res.redirect('http://lillyme.herokuapp.com');
+			res.redirect('http://www.shortit.xyz/');
 	   	}
     });
 });
